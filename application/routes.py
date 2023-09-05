@@ -54,7 +54,7 @@ def page1():
     """ Second page. Note search param being passed safely. Also result count calculated and passed into description.
     """
     cursor = get_db().cursor()
-    cursor.execute("SELECT first_name, last_name FROM actor WHERE last_name=%s ",'Barr')
+    cursor.execute("SELECT first_name, last_name FROM actor WHERE last_name=%s ",'SMITH')
     result = cursor.fetchall()
     app.logger.info(result)
     return render_template(
